@@ -1,0 +1,44 @@
+{
+  "name": "@herond/wallet",
+  "version": "0.40.5",
+  "description": "wallet sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/wallet",
+  "source": "src/index.ts",
+  "main": "dist/herond-wallet.cjs.js",
+  "module": "dist/herond-wallet.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "yarn test:concurrently 'yarn test:run'",
+    "test:run": "yarn test:file tests/**/*.spec.ts",
+    "test:file": "TS_NODE_PROJECT=../../tsconfig.test.json mocha -r ts-node/register --timeout 30000",
+    "test:concurrently": "concurrently -k --success first 'yarn start:hardhat2 > /dev/null'",
+    "start:hardhat2": "yarn run hardhat node --port 7047 --config ./hardhat2.config.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@herond/abi": "^0.40.5",
+    "@herond/config": "^0.40.5",
+    "@herond/guard": "^0.40.5",
+    "@herond/network": "^0.40.5",
+    "@herond/relayer": "^0.40.5",
+    "@herond/transactions": "^0.40.5",
+    "@herond/utils": "^0.40.5",
+    "@ethersproject/abi": "^5.5.0",
+    "@ethersproject/properties": "^5.5.0",
+    "@ethersproject/providers": "^5.5.1",
+    "ethers": "^5.5.2",
+    "fetch-ponyfill": "^7.1.0"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@herond/wallet-contracts": "1.9.6",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "ganache-core": "^2.13.2",
+    "web3": "^1.7.0"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}

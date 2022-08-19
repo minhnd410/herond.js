@@ -1,0 +1,36 @@
+{
+  "name": "@herond/deployer",
+  "version": "0.40.5",
+  "description": "deployer sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/deployer",
+  "source": "src/index.ts",
+  "main": "dist/herond-deployer.cjs.js",
+  "module": "dist/herond-deployer.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "yarn test:file tests/**/*.spec.ts",
+    "test:file": "TS_NODE_PROJECT=../../tsconfig.test.json mocha -r ts-node/register --timeout 30000",
+    "typecheck": "tsc --noEmit",
+    "build": "rm -rf src/typings && hardhat clean && yarn compile-contracts && yarn gen:typings",
+    "compile-contracts": "hardhat --max-memory 4096 compile",
+    "gen:typings": "rm -f src/typings/contracts/* && typechain --target ethers-v5 --outDir src/typings/contracts './artifacts/contracts/!(build-info)/**/*[^dbg].json'"
+  },
+  "dependencies": {
+    "@herond/utils": "^0.40.5",
+    "@ethersproject/contracts": "^5.5.0",
+    "ethers": "^5.5.2"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@typechain/ethers-v5": "^8.0.5",
+    "dotenv": "^10.0.0",
+    "typechain": "^6.0.5"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}

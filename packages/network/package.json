@@ -1,0 +1,26 @@
+{
+  "name": "@herond/network",
+  "version": "0.40.5",
+  "description": "network sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/network",
+  "source": "src/index.ts",
+  "main": "dist/herond-network.cjs.js",
+  "module": "dist/herond-network.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@herond/utils": "^0.40.5",
+    "@ethersproject/providers": "^5.5.1",
+    "ethers": "^5.5.2"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}

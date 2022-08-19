@@ -1,0 +1,24 @@
+{
+  "name": "@herond/api",
+  "version": "0.40.5",
+  "description": "api sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/api",
+  "source": "src/index.ts",
+  "main": "dist/herond-api.cjs.js",
+  "module": "dist/herond-api.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}

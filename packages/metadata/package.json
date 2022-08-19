@@ -1,0 +1,24 @@
+{
+  "name": "@herond/metadata",
+  "version": "0.40.5",
+  "description": "metadata sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/metadata",
+  "source": "src/index.ts",
+  "main": "dist/herond-metadata.cjs.js",
+  "module": "dist/herond-metadata.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}

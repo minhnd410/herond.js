@@ -1,0 +1,33 @@
+{
+  "name": "@herond/config",
+  "version": "0.40.5",
+  "description": "config sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/config",
+  "source": "src/index.ts",
+  "main": "dist/herond-config.cjs.js",
+  "module": "dist/herond-config.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "yarn test:concurrently 'yarn test:run'",
+    "test:run": "yarn test:file tests/**/*.spec.ts",
+    "test:file": "TS_NODE_PROJECT=../../tsconfig.test.json mocha -r ts-node/register --timeout 30000",
+    "test:concurrently": "concurrently -k --success first 'yarn start:hardhat_b > /dev/null' 'yarn start:hardhat_a > /dev/null' ",
+    "start:hardhat_a": "yarn run hardhat node --port 7547",
+    "start:hardhat_b": "yarn run hardhat node --port 7548",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@herond/abi": "^0.40.5",
+    "@herond/multicall": "^0.40.5",
+    "@herond/network": "^0.40.5",
+    "@herond/utils": "^0.40.5",
+    "ethers": "^5.5.2"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}

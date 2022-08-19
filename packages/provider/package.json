@@ -1,0 +1,37 @@
+{
+  "name": "@herond/provider",
+  "version": "0.40.5",
+  "description": "provider sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/provider",
+  "source": "src/index.ts",
+  "main": "dist/herond-provider.cjs.js",
+  "module": "dist/herond-provider.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@herond/abi": "^0.40.5",
+    "@herond/auth": "^0.40.5",
+    "@herond/config": "^0.40.5",
+    "@herond/network": "^0.40.5",
+    "@herond/transactions": "^0.40.5",
+    "@herond/utils": "^0.40.5",
+    "@herond/wallet": "^0.40.5",
+    "@ethersproject/abstract-signer": "^5.5.0",
+    "@ethersproject/hash": "^5.5.0",
+    "@ethersproject/providers": "^5.5.1",
+    "@ethersproject/web": "^5.5.1",
+    "ethers": "^5.5.2",
+    "eventemitter2": "^6.4.5",
+    "webextension-polyfill-ts": "^0.26.0"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}

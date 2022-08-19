@@ -1,0 +1,22 @@
+{
+  "name": "@herond/abi",
+  "version": "0.40.5",
+  "description": "abi sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/abi",
+  "source": "src/index.ts",
+  "main": "dist/herond-abi.cjs.js",
+  "module": "dist/herond-abi.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "echo",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}

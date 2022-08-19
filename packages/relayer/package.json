@@ -1,0 +1,34 @@
+{
+  "name": "@herond/relayer",
+  "version": "0.40.5",
+  "description": "relayer sub-package for Sequence",
+  "repository": "https://github.com/minhnd410/herond.js/tree/master/packages/relayer",
+  "source": "src/index.ts",
+  "main": "dist/herond-relayer.cjs.js",
+  "module": "dist/herond-relayer.esm.js",
+  "author": "Horizon Blockchain Games",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "yarn test:concurrently 'yarn test:run'",
+    "test:run": "yarn test:file tests/**/*.spec.ts",
+    "test:file": "TS_NODE_PROJECT=../../tsconfig.test.json mocha -r ts-node/register --timeout 30000",
+    "test:concurrently": "concurrently -k --success first 'yarn start:hardhat > /dev/null' ",
+    "start:hardhat": "yarn run hardhat node --port 9547",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@herond/abi": "^0.40.5",
+    "@herond/config": "^0.40.5",
+    "@herond/transactions": "^0.40.5",
+    "@herond/utils": "^0.40.5",
+    "@ethersproject/providers": "^5.5.1",
+    "ethers": "^5.5.2",
+    "fetch-ponyfill": "^7.1.0"
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "files": [
+    "src",
+    "dist"
+  ]
+}
